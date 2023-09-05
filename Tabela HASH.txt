@@ -1,0 +1,81 @@
+Tabela HASH - introdução
+
+-Colisão
+-Tratamento de colisão
+-Implementação com e sem colisão
+
+Problema
+Em uma faculdade é criado um banco de dados com o RA e o nome de todos
+os alunos. Como é possível criar uma busca eficiente neste Banco de Dados?
+
+BUSCA SEQUENCIAL => Passar por todos elementos até achar o dado procurado
+
+BUSCA BINÁRIA => funciona apenas com vetores ordenados, onde começamos 
+do meio, e vemos se o valor é maior ou menor, ai ele joga metade fora e faz
+tudo de novo até achar o dado ou diz que o dado não existe
+
+Função HASH 
+Função de Espalhamento
+	QUANTIDADE DE LETRAS -1
+
+Tabela HASH
+chave			valor		índice
+|         |		0
+|         |		1
+| BIA  	  |           	2
+|         |		3
+| PAULA   |		4
+| CARLOS  |		5
+
+Digamos que eu queira adicionar "MARIA" na tabela hash, não seria possível já
+que as duas deveriam ficar no mesmo local da memória e nós chamamos isso de 
+Colisão
+
+Uma tabela HASH ou tabela de dispersão (também conhecida como tabela de
+espalhamento ou de dispersão) é uma estrutura de dados especial, que associa
+chaves de pesquisa a valores, através de uma função. Seu objetivo é, a partir
+de uma chave simples, fazer uma busca rápida e obter o valor desejado.
+
+
+exemplo:  
+
+tamanho:6
+Fator de carga:
+Fc = 4/6 = 0,67
+
+fator de carga precisa sempre ser maior que o vetor.
+
+função de espalhamento:
+chave mod Tamanho
+
+Chave%Tamanho = resto da divisão
+
+Tabela HASH
+chave			valor		índice
+|   36    |  18		0
+|    7 	  |		1
+|   	  |           	2
+|         |		3
+|     	  |		4
+|   41	  |		5
+
+
+Tratamento de Colisões
+
+Existem diversas formas de realizar o tratamento de colisões em uma tabela
+Hash, as duas formas que estudaremos nessa aula são:
+*Encadeamento Exterior ou separado:
+	=> Listas Encadeadas.
+*Encadeamento Interior ou Aberto:
+	=>Heterogêneo
+	=>   Homogêneo (teste linear)
+
+
+
+
+
+
+
+
+
+
